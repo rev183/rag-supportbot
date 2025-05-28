@@ -39,7 +39,7 @@ To run the application locally, you need to start both the FastAPI backend and t
 2.  **Start the Panel frontend:**
     Open a new terminal window or tab, navigate to the project directory, activate your virtual environment, and run:
     ```bash
-    panel serve app.py --address 0.0.0.0 --port 5006 --autoreload
+    panel serve app.py --address 0.0.0.0 --port 5006 --autoreload --allow-websocket-origin=0.0.0.0:5006
     ```
     The `--autoreload` flag is useful for development.
 

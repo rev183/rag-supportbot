@@ -2,13 +2,11 @@ import uvicorn
 import logging
 from fastapi import FastAPI, HTTPException
 from contextlib import asynccontextmanager
-from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from models import ChatResponse, QueryRequest
 from rag_helper import init_rag
 
 logger = logging.getLogger("server")
-load_dotenv()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
