@@ -57,7 +57,7 @@ def load_and_process_docs():
     return processed_pdf_docs
 
 def load_angelone_texts():
-    # scrape_angelone_support_pages()
+    scrape_angelone_support_pages()
     text_loader = DirectoryLoader("sources/angelone-support", glob="**/*.txt", loader_cls=TextLoader)
     text_docs = text_loader.load()
     text_text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=100)
